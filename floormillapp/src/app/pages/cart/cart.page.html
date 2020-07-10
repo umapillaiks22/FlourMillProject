@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons  slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Speakers</ion-title>
+      <ion-searchbar></ion-searchbar>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid fixed>
+    <!-- <ion-row> -->
+      <ion-col size="12" size-md="6" *ngFor="let p of cart; let i=index">
+        <ion-list class="speaker-card" *ngIf=p.qty >
+          <!-- <ion-card-header> -->
+            <ion-item detail="false" lines="none">
+              <ion-avatar slot="start">
+                <ion-label>
+                  <ion-icon name="close-outline" (click)="removeCartItem(p)" ></ion-icon>
+                </ion-label>
+                <img src="../../../assets/img/pack.png" [alt]="p.name ">
+              </ion-avatar>
+              <ion-label>
+                <h2>{{p.name}}</h2>
+                <p>Price : {{p.price}}/kg</p>
+                <p>Total : Rs {{p.qty * p.price}}</p>
+              </ion-label>
+              <ion-label>
+                Qty:
+                <button class="add-btn" clear (click)="decreaseCartItem(i)"><ion-icon name="remove" ></ion-icon></button>
+                <span>   {{p.qty}}   </span>
+                <button class="add-btn" clear (click)="increaseCartItem(i)"><ion-icon name="add" ></ion-icon></button>
+              </ion-label>
+              </ion-item>
+
+          <!-- </ion-card-header> -->
+        </ion-list>
+      </ion-col>
+    <!-- </ion-row> -->
+
+    <ion-row>
+      <ion-col>
+      <!-- <p>Total Items : {{count()}}</p> -->
+    </ion-col>
+    <ion-col>
+      <p align="right">Total Price : {{getTotal()}} /-</p>
+    </ion-col>
+    </ion-row>
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          Select Date:
+        </ion-label>
+        <ion-datetime
+          displayFormat="MMM DD, YYYY"
+          max="2056"
+          [(ngModel)]="conferenceDate">
+        </ion-datetime>
+      </ion-item>
+    </ion-list>
+<ion-item *ngIf=getTotal()>
+    <ion-button expand="block" (click)="submit()"  color="success" routerLink='/checkout'  expand="block">Confirm Order</ion-button>
+  </ion-item>
+  </ion-grid>
+  </ion-content>

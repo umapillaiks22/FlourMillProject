@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+      <h1>Assign staff</h1>
+    </div>
+<div class="row">
+    <table align-text="center" class="table">
+      <thead class="thead thead-dark">
+        <tr>
+          <!-- <th>Order-ID</th> -->
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Assign To</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr >
+          <!-- <td>{{orders[0].id}}</td> -->
+          <td>{{orders[0].name}}</td>
+          <td>{{orders[0].qty}}</td>
+          <td>{{orders[0].price * orders[0].qty}}</td>
+          <td>
+            <div class="btn-group">
+              <select [(ngModel)]="selectedStaff" (change)="assignStaff()">
+                <option [value]="s.key" *ngFor="let s of staff" >{{s.name}}</option>
+              </select>
+            <button type="submit" class="btn btn-success" (click) = "assigstaff(selectedStaff)">Assign</button>
+
+            </div>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

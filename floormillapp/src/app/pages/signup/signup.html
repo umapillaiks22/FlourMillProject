@@ -1,0 +1,28 @@
+<ion-content >
+  <div class="login-logo">
+    <img src="assets/img/appicon.png" alt="Ionic logo">
+  </div>
+  <form [formGroup]="createUserForm" (submit)="createUser()">
+      <ion-item lines="full">
+          <ion-label position="floating">Name</ion-label>
+          <ion-input type="text" formControlName="username" required></ion-input>
+        </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" formControlName="email" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+      <ion-button type="submit" [disabled]="!createUserForm.valid">Register</ion-button>
+      <ion-button color="primary" routerLink="/login">Login</ion-button>
+
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

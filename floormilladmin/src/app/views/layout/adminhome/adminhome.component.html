@@ -1,0 +1,72 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-6 col-lg-3">
+      <div class="card text-white bg-info">
+        <div class="card-body pb-0">
+
+          <div class="text-value">Today's Sales</div>
+          <div>Number of Deliveries</div>
+        </div>
+        <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-lg-3">
+      <div class="card text-white bg-primary">
+        <div class="card-body pb-0">
+
+          <div class="text-value">Today's Collection</div>
+          <div>In Rupees</div>
+        </div>
+        <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-lg-3">
+      <div class="card text-white bg-warning">
+        <div class="card-body pb-0">
+
+          <div class="text-value">Monthly Sales</div>
+          <div>Number of Deliveries</div>
+        </div>
+        <div class="chart-wrapper mt-3" style="height:70px;">
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-lg-3">
+      <div class="card text-white bg-danger">
+        <div class="card-body pb-0">
+          <div class="text-value">Today's Progress</div>
+          <div>Deliveries Completed</div>
+        </div>
+        <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+          <progress value="35" max="100"></progress>
+        </div>
+      </div>
+    </div><!--/.col-->
+  </div><!--/.row-->
+  <div class="card">
+      <div class="card-header">
+        Bar Chart
+        <div class="card-header-actions">
+          <a href="http://www.chartjs.org">
+            <small class="text-muted">docs</small>                
+          </a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrapper">
+          <canvas baseChart class="chart"
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [chartType]="barChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+    </div>
+</div>

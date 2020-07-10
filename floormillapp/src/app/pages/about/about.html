@@ -1,0 +1,63 @@
+<ion-content>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="presentPopover($event)">
+          <!-- <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon> -->
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="about-header">
+    <!-- Instead of loading an image each time the select changes, use opacity to transition them -->
+    <div class="about-image madison" [ngStyle]="location === 'madison' && {'opacity': '1'}"></div>
+    <div class="about-image austin" [ngStyle]="location === 'austin' && {'opacity': '1'}"></div>
+    <div class="about-image chicago" [ngStyle]="location === 'chicago' && {'opacity': '1'}"></div>
+    <div class="about-image seattle" [ngStyle]="location === 'seattle' && {'opacity': '1'}"></div>
+  </div>
+
+  <div class="about-info">
+    <h3 class="ion-padding-top ion-padding-start">About</h3>
+
+    <p class="ion-padding-start ion-padding-end">
+This is an app for the digitalization of Flourmill business.</p>
+<p>Made by the students of S.B Jain IT dept: </p>
+<p>Uma Pillai</p>
+<p>Sakshi Peshne</p>
+<p>Gaurav Dhomane</p>
+<p>Prince Palewar</p>
+
+    <!-- <h3 class="ion-padding-top ion-padding-start">Details</h3> -->
+
+    <!-- <ion-list lines="none">
+      <ion-item>
+        <ion-label>
+          Location
+        </ion-label>
+        <ion-select [(ngModel)]="location" [interfaceOptions]="selectOptions">
+          <ion-select-option value="madison">Madison, WI</ion-select-option>
+          <ion-select-option value="austin">Austin, TX</ion-select-option>
+          <ion-select-option value="chicago">Chicago, IL</ion-select-option>
+          <ion-select-option value="seattle">Seattle, WA</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Date
+        </ion-label>
+        <ion-datetime
+          displayFormat="MMM DD, YYYY"
+          max="2056"
+          [(ngModel)]="conferenceDate">
+        </ion-datetime>
+      </ion-item>
+    </ion-list> -->
+
+
+
+  </div>
+</ion-content>

@@ -1,0 +1,135 @@
+<div class="container">
+    <strong>Price Modification</strong>
+  <div class="row">
+  </div>
+  <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2">
+        <button [routerLink]="['/layout/addproduct']" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"> Add Product</i></button>
+      </div>
+    </div>
+
+    <div class="col-md-5" >
+        <div class="card" *ngFor = "let p of product">
+          <div class="card-header">
+            Update Price
+            <div class="card-header-actions" style="height: 21px;" >
+              <label class="switch switch-3d switch-primary">
+                <input [(ngModel)]="isEnabled" type="checkbox" class="switch-input">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Product Name:{{p.name}}  </h3>
+            <!-- <img src="flour.jpg" alt="Roti"><br> -->
+            <h3>Price : {{p.price}}</h3>
+            <input type="number" placeholder="Enter the price" class="form-control"><br>
+            <button type="button" class="btn btn-primary" [disabled]="!isEnabled">Update</button>
+          </div>
+        </div>
+      </div>
+  <!-- <div class="row">
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-header">
+          Update Price
+          <div class="card-header-actions" style="height: 21px;" >
+            <label class="switch switch-3d switch-primary">
+              <input [(ngModel)]="isEnabled" type="checkbox" class="switch-input">
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+        </div> -->
+        <!-- <div class="card-body">
+          <h3>Product Name:</h3>
+          
+          <h3>Price : </h3>
+          <input type="number" placeholder="Enter the price" class="form-control"><br>
+          <button type="button" class="btn btn-primary" [disabled]="!isEnabled">Update</button>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="col-md-5"> -->
+      <!-- <div class="card">
+        <div class="card-header">
+          Card with switch
+          <div class="card-header-actions" style="height: 21px;" >
+            <label class="switch switch-3d switch-primary">
+              <input [(ngModel)]="isEnabled1" type="checkbox" class="switch-input">
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Roti(s)</h3>
+           <img src="flour.jpg" alt="Roti"><br> -->
+          <!-- <h3>Price : </h3>
+          <input type="number" placeholder="Enter the price" class="form-control"><br>
+          <button type="button" class="btn btn-primary" [disabled]="!isEnabled1">Update</button>
+        </div>
+      </div>
+    </div> --> -->
+  <!-- </div> -->
+  <!-- <div class="row">
+    <div class="col-sm-6 col-md-4">
+       <div class="card">
+         <div class="card-header">
+           Atta
+           <div class="card-header-actions" style="height: 21px;" >
+               <label class="switch switch-3d switch-primary">
+                   <input type="checkbox" class="switch-input" unchecked>
+                   <span class="switch-slider"></span>
+                 </label>
+           </div>
+         </div>
+       <div class="card-body">
+       <img class="card-img-top" src="../../../../assets/fm4.0.jpg" alt="Card image" style="width:100%; height:10%;">
+       <h4 class="card-title">Flour</h4>
+       <p class="card-text">Price varies according to weight.</p>
+       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+         Select Weight
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">5 KG</a>
+        <a class="dropdown-item" href="#">10 KG</a>
+      </div>Price
+       <p>Price Modification:<input type="number" placeholder="Price"></p>
+       <a class="btn btn-primary">Update</a>
+         </div>
+       </div>
+     </div>
+
+     <div class="col-sm-6 col-md-4">
+       <div class="card">
+         <div class="card-header">
+           Atta
+           <div class="card-header-actions" style="height: 21px;" >
+               <label class="switch switch-3d switch-primary">
+                   <input type="checkbox" class="switch-input" unchecked>
+                   <span class="switch-slider"></span>
+                 </label>
+           </div>
+         </div>
+         <div class="card-body">
+           <img class="card-img-top" src="../../../../assets/fm4.0.jpg" alt="Card image" style="width:100%; height:10%;">
+       <h4 class="card-title">Flour</h4>
+       <p class="card-text">Price varies according to weight.</p>
+       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+         Roti(s)
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Butter Naan</a>
+        <a class="dropdown-item" href="#">Rumali Roti</a>
+      </div>Price
+       <p>Price Modification:<input type="number" placeholder="Price"></p>
+       <a href="#" class="btn btn-primary">Update</a>
+         </div>
+       </div>
+     </div>
+   </div> -->
+</div>

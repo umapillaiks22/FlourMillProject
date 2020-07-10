@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+    <!-- <ion-buttons large slot="end"> <ion-icon name="search-outline"    (click)="search()"></ion-icon> <ion-icon name="cart"   (click)="cart()"></ion-icon>    </ion-buttons> -->
+ </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content >
+  <ion-slides pager class="tutorial-page">
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" class="slide-image"/>
+    </ion-slide>
+  </ion-slides>
+    <ion-card  class="card-background-page" class="ima">
+        <img src="../../../assets/img/bread.jpg" alt="ion" >
+
+    </ion-card>
+
+      <ion-card  class="card-background-page">
+          <img src="../../../assets/img/bck.jpg" alt="ion">
+      </ion-card>
+
+    <ion-card  class="card-background-page">
+        <img src="../../../assets/img/speakers/naan.jpg" alt="ion">
+    </ion-card>
+    <ion-card  class="card-background-page">
+        <img src="../../../assets/img/bk.jpg" alt="ion" >
+    </ion-card>
+
+
+</ion-content>

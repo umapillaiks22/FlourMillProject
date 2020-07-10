@@ -1,0 +1,77 @@
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card mx-4">
+            <div class="card-body p-4">
+              <form [formGroup] = "registerForm">
+                <h1>Register</h1>
+                <p class="text-muted">Create your account</p>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Username" autocomplete="username" formControlName = "username" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Email" autocomplete="email" formControlName = "email" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" for="inputGroupSelect01">Role</span>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">Customer</option>
+                    <option value="2">Staff</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">i</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Lane" autocomplete="address-level1" formControlName = "lane" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">ii</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Area" autocomplete="address-level2" formControlName = "area" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">iii</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="City" autocomplete="address-level3" formControlName = "city" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">iv</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Circle" autocomplete="address-level4" formControlName = "circle" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Password" autocomplete="new-password" formControlName = "password" required>
+                </div>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="icon-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Repeat Password" autocomplete="new-password" formControlName = "cpassword" required>
+                </div>
+                <button type="button" button (click) = "addinfo()" class="btn btn-block btn-success">Create Account</button>
+              </form>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

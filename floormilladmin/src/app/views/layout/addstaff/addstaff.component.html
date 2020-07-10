@@ -1,0 +1,41 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-md-2">
+      <button [routerLink]="['/layout/staffdetails']" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"> Back</i></button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+    <form [formGroup]="staffForm">
+      <div class="card">
+        <div class="card-header">
+          <strong>Add Staff Form</strong>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" formControlName="name" required>
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="tel" class="form-control" id="age" placeholder="Enter Age" formControlName="age" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter Address" formControlName="address" required>
+          </div>
+          <div class="form-group">
+            <label for="contactnumber">Contact Number</label>
+            <input type="tel" class="form-control" id="contactnumber" placeholder="Enter Contact Number" formControlName="number" required>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="submit" (click)="submit()" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          <button type="reset" (click)="reset()" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>

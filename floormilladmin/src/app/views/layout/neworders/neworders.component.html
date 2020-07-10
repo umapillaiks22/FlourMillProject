@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>New Orders</h1>
+</div>
+  <br>
+  <br>
+<div class="container">
+<table align-text="center" class="table">
+  <thead class="thead thead-dark" >
+    <tr>
+      <!-- <th>Order-ID</th> -->
+      <th>Product Name</th>
+      <!-- <th>Product</th> -->
+      <th>Quantity (kg)</th>
+      <th>Price</th>
+      <th>Assign</th>
+      <th>Staff Assigned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let a of orders ; let i = index">
+      <!-- <td>{{a.id}}</td> -->
+      <td>{{a[i].name}}</td>
+      <!-- <td>{{a[i].item}}</td> -->
+      <td>{{a[i].qty}}</td>
+      <td>{{a[i].price *a[i].qty}}</td>
+      <td>
+        <div class="btn-group">
+          <div class="btn-group">
+              <button type="submit" (click) = "assigstaff(a)">Assign</button>
+          </div>
+          <button type="button" class="btn btn-danger">Decline</button>
+
+        </div></td>
+        <td></td>
+    </tr>
+
+
+  </tbody>
+</table>
+</div>
